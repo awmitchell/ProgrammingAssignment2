@@ -7,7 +7,7 @@
 ## NON-TYPICAL EXAMPLE OF USE FOR DEMONSTRATION PURPOSES:
 ##
 ##> source("cachematrix.R")                     ## Load the functions. Ensure your path is correct.
-##> a = martix(rnorm(25), nrow = 5, ncol = 5)   ## Create some random data for demonstration.
+##> a = matrix(rnorm(25), nrow = 5, ncol = 5)   ## Create some random data for demonstration.
 ##> a
 ##            [,1]       [,2]       [,3]       [,4]       [,5]
 ##[1,] -0.10612452  1.3048697  0.6359504 -0.3066386 -0.4304691
@@ -15,7 +15,7 @@
 ##[3,] -0.09465904 -1.3888607 -2.6564554 -0.1719174 -1.7631631
 ##[4,]  2.01842371 -0.2787888 -2.4404669  1.2146747  0.4600974
 ##[5,] -0.06271410 -0.1333213  1.3201133  1.8951935 -0.6399949
-##> b <- makeCacheMatrix()                      ## Call makeCacheMatrix to create methods on b.
+##> b <- makeCacheMatrix(a)                      ## Call makeCacheMatrix to create methods on b.
 ##> b                                           ## Not normally required. For demonstration only.
 ##$set
 ##function (y) 
@@ -55,7 +55,7 @@
 ##> source("cachematrix.R")			## Load the functions. (Ensure correct path.)
 ##> a = martix(rnorm(25), nrow = 5, ncol = 5)   ## Create some random data for demonstration.
 ##> b <- makeCacheMatrix(a)                     ## Call makeCacheMatrix to create $methods on b.
-##> > cacheSolve(b)                             ## Call cacheSolve to solve, cache & return inverse.
+##> cacheSolve(b)                               ## Call cacheSolve to solve, cache & return inverse.
 ##           [,1]       [,2]        [,3]        [,4]        [,5]
 ##[1,] -1.2598782  0.7261407 -0.02018182 -0.09874974  0.54012031
 ##[2,]  1.2875624 -0.3270038 -0.08019734  0.29954905 -0.29829160
